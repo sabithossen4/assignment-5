@@ -31,7 +31,7 @@
     
     const tName =document.querySelector('.card-title').textContent;
     document.querySelector('.card-title').textContent;
-    log.textContent=`You have completed the task  ${tName} ${timeS}`;    
+    log.textContent=`You have completed the task  ${tName} at ${timeS}`;    
     acivity.appendChild(log);  
     
 
