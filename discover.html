@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Something New </title>
+  <!-----daisyUI CDN  -->  
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="max-w-[1280px] m-auto bg-[#e9ecec]">
+  <header class="w-10/12 m-auto">
+    <!-- Nav Section -->
+ <nav class="  flex justify-between items-center bg-[#ffffff] p-6 rounded-2xl my-6 ">
+   <div class="flex items-center">
+     <img src="./assets/logo.png" alt="">
+     <h1 class="text-[35px] pl-2">Dev<span class="font-bold">Board</span></h1>
+   </div>
+   <div class="flex items-center gap-8" >
+     
+     <button id="back-desk" class=" text-white bg-blue-400 font-bold text-2xl">
+       Back to Desk
+     </button>
+   </div>
+ </nav>
+ <section>
+  <h1 class="text-center font-bold text-4xl bg-[#ffffff] p-6 rounded-2xl">Blogs</h1>
+  <h1 class="bg-[#ffffff] p-6 rounded-2xl my-3">Question-1: What are the different ways to select an element in the DOM?</h1>
+  <h3 class="bg-[#ffffff] p-6 rounded-2xl my-3">   getElementById = ID দিয়ে সিলেক্ট <br> <br>
+    getElementsByClassName = Class দিয়ে সিলেক্ট <br> <br>
+    getElementsByTagName = Tag name দিয়ে সিলেক্ট <br> <br>
+    querySelector = CSS সিলেক্টর (প্রথম ম্যাচ) 
+    querySelectorAll = CSS সিলেক্টর (সব ম্যাচ)</h3>
+
+
+  <h1 class="bg-[#ffffff] p-6 rounded-2xl my-3">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+  <h3 class="bg-[#ffffff] p-6 rounded-2xl my-3">innerHTML: একটি এলিমেন্টের HTML কন্টেন্ট, যার মধ্যে ট্যাগও অন্তর্ভুক্ত থাকে। <br> <br>
+    innerText: দৃশ্যমান টেক্সট কন্টেন্ট ফেরত দেয়, HTML ট্যাগ বাদ দিয়ে এবং CSS স্টাইল  অনুসরণ করে। <br> <br>
+    textContent: এলিমেন্টের সব টেক্সট কন্টেন্ট ফেরত দেয়, গোপন টেক্সটসহ, স্টাইল বা দৃশ্যমানতার পার্থক্য না করে</h3>
+
+
+  <h1 class="bg-[#ffffff] p-6 rounded-2xl my-3">Question-3: What is event delegation in the DOM? </h1>
+  <h3 class="bg-[#ffffff] p-6 rounded-2xl my-3">ইভেন্ট ডেলিগেশন হলো DOM এ একটি কৌশল যেখানে  প্রতিটি উপাদানে আলাদা করে ইভেন্ট লিসেনার সংযুক্ত করার পরিবর্তে একটি প্যারেন্ট উপাদানে একটি ইভেন্ট লিসেনার সংযুক্ত করে। ইভেন্টটি লক্ষ্য উপাদান থেকে প্যারেন্ট উপাদানে "বাবল" হয়, এবং প্যারেন্ট ইভেন্টটি ম্যানেজ করে</h3>
+
+
+  <h1 class="bg-[#ffffff] p-6 rounded-2xl my-3">Question-4: What is event bubbling in the DOM?</h1>
+  <h3 class="bg-[#ffffff] p-6 rounded-2xl my-3">ইভেন্ট বাবলিং DOM এ একটি প্রক্রিয়া যেখানে কোনো ইভেন্ট, যেমন ক্লিক, একটি উপাদানে ঘটলে তা প্রথমে সেই উপাদানে ঘটতে থাকে, তারপর "বাবল" হয়ে উপরের প্যারেন্ট উপাদানে পৌঁছায়, এবং এই প্রক্রিয়া ডকুমেন্টের রুট (root) পর্যন্ত চলতে থাকে।
+
+    যখন কোনো ইভেন্ট চাইল্ড উপাদানে ঘটবে, তখন প্রথমে ওই চাইল্ড উপাদানে ইভেন্ট লিসেনার চলবে।
+    তারপর সেই ইভেন্টটি প্যারেন্ট উপাদানে বাবল হয়ে চলে যাবে, যদি প্যারেন্টে সেই ইভেন্টের জন্য কোনো লিসেনার থাকে, তাহলে সেটি ট্রিগার হবে।
+    এই প্রক্রিয়া চলতে চলতে ইভেন্টটি  document পর্যন্ত পৌঁছায়</h3>
+
+
+  <h1 class="bg-[#ffffff] p-6 rounded-2xl my-3">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+  <h3 class="bg-[#ffffff] p-6 rounded-2xl my-3">এলিমেন্ট তৈরি করা:
+    javascript
+    Copy
+    Edit
+    let newElement = document.createElement('div'); 
+    newElement.textContent = 'Hello, World!'; <br>
+    2. এলিমেন্ট যোগ করা:
+    javascript
+    Copy
+    Edit
+    document.body.appendChild(newElement); <br>
+    3. এলিমেন্ট মুছে ফেলা:
+    javascript
+    Copy
+    Edit
+    newElement.remove();</h3>
+ </section>
+</header>
+<script src="./script/back.js"></script>
+</body>
+</html>
