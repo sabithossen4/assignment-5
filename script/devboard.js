@@ -22,19 +22,14 @@
 
         
 
-    const acivity =document.getElementById('activity-clear');       
-    
-
+    const acivity =document.getElementById('activity-clear');  
     const now = new Date();
     const timeS = now.toLocaleTimeString();
     const log = document.createElement('p');
     
-    const tName =document.querySelector('.card-title').textContent;
-    document.querySelector('.card-title').textContent;
+    const tName =document.querySelectorAll('.card-title')[i].textContent;    
     log.textContent=`You have completed the task  ${tName} at ${timeS}`;    
-    acivity.appendChild(log);  
-    
-
+    acivity.appendChild(log);    
       
   });
  }
@@ -46,16 +41,18 @@ document.getElementById('assigned').addEventListener('click', function(){
 
 //  Theme Part
 const button =document.getElementById('bg-color').addEventListener('click', function(){
-  const body=document.body;
+  const b=document.body;
   const color=['#8a2be2', '#a52a2a', '#5f9ea0', '#ff7f50'] ;
   const colorRan=color[Math.floor(Math.random()*color.length)];
-  body.style.backgroundColor=colorRan;   
+  b.style.backgroundColor=colorRan;   
+  console.log(b)
 });
 
 // Activity log clear 
 document.getElementById('clear').addEventListener('click', function(){
   const activityClear=document.getElementById('activity-clear');
   activityClear.innerHTML= '';  
+  console.log(activityClear)
 })
 
 // real tiem 
@@ -67,8 +64,3 @@ const monthName = months[cDate.getMonth()];
 const date = cDate.getDate();
 const year = cDate.getFullYear();
 document.getElementById('real-time').innerText= `${dayName}, ${monthName} ${date}, ${year}`;
-
-
-
-
-
